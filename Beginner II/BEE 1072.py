@@ -1,3 +1,5 @@
+# Lists start being used here
+
 n = int(input())
 li, liw = [], []
 for i in range(0, n):
