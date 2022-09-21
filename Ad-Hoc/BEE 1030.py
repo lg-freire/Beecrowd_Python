@@ -1,4 +1,3 @@
-
 nc = int(input())
 for i in range(0, nc):
     n, k = map(int, input().split())
@@ -10,7 +9,7 @@ for i in range(0, nc):
             dead += k
         else:
             dead = (dead + k) % len(nums)
-        if dead != 0:
+        if dead > 1:
             del nums[dead-1]
         else:
             del nums[dead]
