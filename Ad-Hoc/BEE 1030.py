@@ -3,17 +3,11 @@ for i in range(0, nc):
     n, k = map(int, input().split())
     nums = list(range(1, n+1))
     print(nums)
-    dead = 0
+    dead = k - 1
     while len(nums) > 1:
-        if (dead + k) <= len(nums):
-            dead += k
-        else:
-            dead = (dead + k) % len(nums)
-        if dead > 1:
-            del nums[dead-1]
-        else:
-            del nums[dead]
+        nums.pop(dead)
+        dead += (k - 1)
+        if dead >= len(nums):
+            dead %= len(nums)
         print(nums)
-        if dead == len(nums):
-            dead = 0
     print(f'Case {i+1}: {nums[0]}')
