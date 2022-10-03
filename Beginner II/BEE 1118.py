@@ -1,5 +1,5 @@
 while True:
-    flag = 0
+    x = 0
     total = 0
     for i in range(0, 2):
         while True:
@@ -10,7 +10,8 @@ while True:
             else:
                 print('nota invalida')
     print(f'media = {total / 2:.2f}')
-    while 1 >= flag >= 2:
-        flag = int(input('novo calculo (1-sim 2-nao)'))
-    if flag == 2:
+    while x != 1 and x != 2:
+        print('novo calculo (1-sim 2-nao)')
+        x = int(input())
+    if x == 2:
         break
