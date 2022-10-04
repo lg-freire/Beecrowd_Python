@@ -11,6 +11,7 @@ while True:
                 print('nota invalida')
     print(f'media = {total / 2:.2f}')
     while x != 1 and x != 2:
+        # URI só aceita assim
         print('novo calculo (1-sim 2-nao)')
         x = int(input())
     if x == 2:
